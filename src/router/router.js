@@ -235,6 +235,18 @@ export const appRouter = [
         ]
     },
     {
+        path: '/rbac',
+        icon: 'ios-infinite',
+        name: 'rbac',
+        title: 'RBAC',
+        component: Main,
+        children: [
+            {path: 'user', title: '用户', name: 'user', icon: 'link', component: () => import('@/views/rbac/User.vue')},
+            {path: 'role', title: '角色', name: 'role', icon: 'link', component: () => import('@/views/rbac/Role.vue')},
+            {path: 'permission', title: '权限', name: 'permission', icon: 'link', component: () => import('@/views/rbac/Permission.vue')}
+        ]
+    },
+    {
         path: '/error-page',
         icon: 'android-sad',
         title: '错误页面',
